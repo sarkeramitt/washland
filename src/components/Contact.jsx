@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { MapPin } from "lucide-react"
+import { MapPin, Phone } from "lucide-react"
 
 
 const locations = [
@@ -102,12 +102,11 @@ const Contact = () => {
   }
 
   return (
-    <section id="contact" className="py-16 bg-gray-900 dark:bg-gray-950 text-white">
+    <section id="contact" className="py-16 bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold">WASHING POINTS</h2>
-          <div className="w-20 h-1 bg-green-500 mx-auto mt-2"></div>
-          <h3 className="text-3xl md:text-5xl font-bold mt-4">Car Washing & Care Points</h3>
+        <span className="inline-block text-green-500 text-sm font-semibold mb-2 px-4 py-1 border border-green-500 rounded-full">Contact Us</span>
+          <h3 className="text-3xl md:text-5xl font-bold mt-2">Car Washing & Care Points</h3>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -122,7 +121,7 @@ const Contact = () => {
                   </div>
                 </div>
                 <div className="flex items-center">
-                  <span className="text-gray-400 mr-2">Call:</span>
+                <Phone className="w-5 h-5 mr-3 flex-shrink-0" />
                   <a href={`tel:${location.phone}`} className="text-green-500 hover:underline">
                     {location.phone}
                   </a>

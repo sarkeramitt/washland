@@ -2,38 +2,38 @@ import { MapPin, Phone, Mail, Twitter, Facebook, Youtube, Instagram, Linkedin } 
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 dark:bg-gray-950 text-white">
+    <footer className="py-16 bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <h3 className="text-xl font-bold mb-6 text-green-500">Get In Touch</h3>
             <div className="space-y-4">
               <div className="flex items-start">
-                <MapPin className="w-5 h-5 mr-3 text-white flex-shrink-0" />
+                <MapPin className="w-5 h-5 mr-3 flex-shrink-0" />
                 <p>123 Street, New York, USA</p>
               </div>
               <div className="flex items-center">
-                <Phone className="w-5 h-5 mr-3 text-white flex-shrink-0" />
+                <Phone className="w-5 h-5 mr-3 flex-shrink-0" />
                 <p>+012 345 67890</p>
               </div>
               <div className="flex items-center">
-                <Mail className="w-5 h-5 mr-3 text-white flex-shrink-0" />
-                <p>info@example.com</p>
+                <Mail className="w-5 h-5 mr-3 flex-shrink-0" />
+                <p>info@washland.com</p>
               </div>
               <div className="flex space-x-3 mt-4">
-                <a href="#" className="bg-gray-800 p-2 rounded-full hover:bg-gray-700 transition-colors duration-300">
+                <a href="#" className="bg-gray-800 text-white p-2 rounded-full hover:bg-gray-700 transition-colors duration-300">
                   <Twitter className="w-5 h-5" />
                 </a>
-                <a href="#" className="bg-gray-800 p-2 rounded-full hover:bg-gray-700 transition-colors duration-300">
+                <a href="#" className="bg-gray-800 text-white p-2 rounded-full hover:bg-gray-700 transition-colors duration-300">
                   <Facebook className="w-5 h-5" />
                 </a>
-                <a href="#" className="bg-gray-800 p-2 rounded-full hover:bg-gray-700 transition-colors duration-300">
+                <a href="#" className="bg-gray-800 text-white p-2 rounded-full hover:bg-gray-700 transition-colors duration-300">
                   <Youtube className="w-5 h-5" />
                 </a>
-                <a href="#" className="bg-gray-800 p-2 rounded-full hover:bg-gray-700 transition-colors duration-300">
+                <a href="#" className="bg-gray-800 text-white p-2 rounded-full hover:bg-gray-700 transition-colors duration-300">
                   <Instagram className="w-5 h-5" />
                 </a>
-                <a href="#" className="bg-gray-800 p-2 rounded-full hover:bg-gray-700 transition-colors duration-300">
+                <a href="#" className="bg-gray-800 text-white p-2 rounded-full hover:bg-gray-700 transition-colors duration-300">
                   <Linkedin className="w-5 h-5" />
                 </a>
               </div>
@@ -109,12 +109,12 @@ const Footer = () => {
               <input
                 type="text"
                 placeholder="Full Name"
-                className="w-full p-3 bg-gray-800 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
+                className="w-full p-3 dark:bg-gray-800 border border-gray-700 rounded-md dark:focus:outline-none dark:focus:ring-2 focus:ring-red-500"
               />
               <input
                 type="email"
                 placeholder="Email"
-                className="w-full p-3 bg-gray-800 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-red-500"
+                className="w-full p-3 dark:bg-gray-800 border border-gray-700 rounded-md dark:focus:outline-none dark:focus:ring-2 focus:ring-red-500"
               />
               <button
                 type="submit"
@@ -132,7 +132,7 @@ const Footer = () => {
           <p className="text-sm text-gray-400 mb-4 sm:mb-0">
             &copy; {new Date().getFullYear()} Your Site Name. All Right Reserved. Designed By
             <a href="#" className="text-green-500 ml-1 hover:underline">
-              HTML Codex
+            AMIT
             </a>
           </p>
           <div className="flex space-x-4">

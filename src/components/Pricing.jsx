@@ -53,7 +53,7 @@ const pricingPlans = [
 
 const Pricing = () => {
   return (
-    <section className="py-16 bg-gray-900 dark:bg-gray-950 text-white">
+    <section className="py-16 bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <span className="inline-block bg-transparent border border-green-500 text-green-500 px-4 py-1 rounded-full text-sm font-semibold mb-2">
@@ -79,7 +79,7 @@ const Pricing = () => {
                 <p className="mb-6">{plan.description}</p>
               </div>
 
-              <div className={`p-8 ${plan.popular ? "bg-gray-900" : "bg-gray-800 text-white"}`}>
+              <div className={`p-8 ${plan.popular ? "bg-gray-900 dark:bg-gray-800" : "bg-gray-800 text-white"}`}>
                 <ul className="space-y-4">
                   {plan.features.map((feature, index) => (
                     <li key={index} className="flex items-center">
@@ -97,7 +97,7 @@ const Pricing = () => {
                   className={`w-full mt-8 py-3 rounded-md font-semibold transition-colors duration-300 ${
                     plan.popular
                       ? "bg-green-500 hover:bg-green-600 text-white"
-                      : "bg-black hover:bg-gray-800 text-white"
+                      : "bg-black hover:bg-green-600 text-white"
                   }`}
                 >
                   GET STARTED

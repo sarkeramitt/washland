@@ -6,26 +6,26 @@ import { ChevronLeft, ChevronRight } from "lucide-react"
 const slides = [
   {
     id: 1,
-    title: "Pioneers Of Solar And Renewable Energy",
+    title: "Achieving True Exterior Shine",
     description:
       "Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr.",
     image:
-      "https://images.unsplash.com/photo-1466611653911-95081537e5b7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+      "./public/slide-1.jpg",
   },
   {
     id: 2,
-    title: "Sustainable Energy Solutions For The Future",
+    title: "Beyond the Bucket",
     description:
       "Leading the way in renewable energy technology with innovative solutions for a cleaner, greener planet.",
     image:
-      "https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1472&q=80",
+      "./public/slide-2.jpg",
   },
   {
     id: 3,
-    title: "Powering A Sustainable Tomorrow",
+    title: "The Long-Term Benefits of Regular Waxing",
     description: "Harnessing the power of nature to create clean, renewable energy solutions for homes and businesses.",
     image:
-      "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+      "./public/slide-3.jpg",
   },
 ]
 

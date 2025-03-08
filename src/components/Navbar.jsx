@@ -1,13 +1,12 @@
 "use client"
 
-import { useState, useContext, useEffect } from "react"
-import { ThemeContext } from "../context/ThemeContext"
-import { Sun, Moon, Menu, X, MapPin, Clock, Phone, Facebook, Twitter, Linkedin, Instagram } from "lucide-react"
+import { useState, useEffect } from "react"
+import { Menu, X, MapPin, Clock, Phone, Facebook, Twitter, Linkedin, Instagram } from "lucide-react"
+import ThemeToggle from "./ThemeToggle"
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
-  const { darkMode, toggleTheme } = useContext(ThemeContext)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,19 +25,9 @@ const Navbar = () => {
     setIsMenuOpen(!isMenuOpen)
   }
 
-  // Debug function to check if theme toggle is working
-  const handleThemeToggle = () => {
-    console.log("Current theme before toggle:", darkMode ? "dark" : "light")
-    toggleTheme()
-    // We can't log the new state immediately as setState is asynchronous
-    setTimeout(() => {
-      console.log("Document has dark class:", document.documentElement.classList.contains("dark"))
-    }, 100)
-  }
-
   return (
     <header className="w-full">
-      <div className="bg-gray-900 text-white py-2 px-4">
+      <div className=" bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-all duration-300 py-2 px-4">
         <div className="container mx-auto flex flex-wrap justify-between items-center">
           <div className="flex items-center space-x-4">
             <div className="flex items-center">
@@ -55,17 +44,17 @@ const Navbar = () => {
               <Phone size={16} className="text-green-500 mr-2" />
               <span className="text-sm">+012 345 6789</span>
             </div>
-            <div className="hidden md:flex items-center space-x-3">
-              <a href="#" className="text-white hover:text-green-500">
+            <div className="hidden md:flex items-center space-x-3  bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-all duration-300">
+              <a href="#" className=" hover:text-green-500">
                 <Facebook size={16} />
               </a>
-              <a href="#" className="text-white hover:text-green-500">
+              <a href="#" className=" hover:text-green-500">
                 <Twitter size={16} />
               </a>
-              <a href="#" className="text-white hover:text-green-500">
+              <a href="#" className=" hover:text-green-500">
                 <Linkedin size={16} />
               </a>
-              <a href="#" className="text-white hover:text-green-500">
+              <a href="#" className=" hover:text-green-500">
                 <Instagram size={16} />
               </a>
             </div>
@@ -74,7 +63,7 @@ const Navbar = () => {
       </div>
 
       <nav
-        className={`bg-gray-800 text-white py-4 px-4 transition-all duration-300 ${scrolled ? "sticky top-0 z-50 shadow-lg" : ""}`}
+        className={` bg-white dark:bg-gray-900 text-gray-900 dark:text-white py-4 px-4 transition-all duration-300 ${scrolled ? "sticky top-0 z-50 shadow-lg" : ""}`}
       >
         <div className="container mx-auto flex justify-between items-center">
           <a href="#" className="text-2xl font-bold text-green-500">
@@ -91,10 +80,10 @@ const Navbar = () => {
             <a href="#services" className="hover:text-green-500">
               SERVICE
             </a>
-            <a href="#" className="hover:text-green-500">
-              PROJECT
+            <a href="#blog" className="hover:text-green-500">
+              BLOG
             </a>
-            <div className="relative group">
+            {/* <div className="relative group">
               <a href="#" className="hover:text-green-500 flex items-center">
                 PAGES
                 <svg
@@ -118,27 +107,22 @@ const Navbar = () => {
                   Page 3
                 </a>
               </div>
-            </div>
+            </div> */}
             <a href="#contact" className="hover:text-green-500">
               CONTACT
             </a>
           </div>
 
           <div className="flex items-center space-x-4">
-            <button
-              onClick={handleThemeToggle}
-              className="p-2 rounded-full hover:bg-green-600 bg-green-500 text-white"
-              aria-label="Toggle theme"
-            >
-              {darkMode ? <Sun size={20} /> : <Moon size={20} />}
-            </button>
+            {/* Use the dedicated ThemeToggle component */}
+            <ThemeToggle />
 
-            <a
+            {/* <a
               href="#contact"
               className="hidden md:block bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-md transition-colors duration-300"
             >
               Get A Quote <span className="ml-1">→</span>
-            </a>
+            </a> */}
 
             <button
               className="md:hidden p-2 rounded-md hover:bg-green-600 bg-green-500 text-white"
@@ -162,21 +146,21 @@ const Navbar = () => {
             <a href="#services" className="py-2 hover:text-green-500">
               SERVICE
             </a>
-            <a href="#" className="py-2 hover:text-green-500">
-              PROJECT
+            <a href="#blog" className="py-2 hover:text-green-500">
+              BLOG
             </a>
-            <a href="#" className="py-2 hover:text-green-500">
+            {/* <a href="#" className="py-2 hover:text-green-500">
               PAGES
-            </a>
+            </a> */}
             <a href="#contact" className="py-2 hover:text-green-500">
               CONTACT
             </a>
-            <a
+            {/* <a
               href="#contact"
               className="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-md text-center transition-colors duration-300"
             >
               Get A Quote
-            </a>
+            </a> */}
           </div>
         </div>
       </nav>

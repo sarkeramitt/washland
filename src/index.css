@@ -2,62 +2,78 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Base variables for light mode */
 :root {
-  --primary: #22c55e;
-  --primary-dark: #16a34a;
-  --secondary: #22c55e;
-  --secondary-dark: #16a34a;
-  --accent: #22c55e;
-  --accent-dark: #16a34a;
+  --color-background: 255, 255, 255; /* white */
+  --color-foreground: 17, 24, 39; /* gray-900 */
+  --color-primary: 34, 197, 94; /* green-500 */
+  --color-primary-foreground: 255, 255, 255; /* white */
+  --color-secondary: 34, 197, 94; /* green-500 */
+  --color-secondary-foreground: 255, 255, 255; /* white */
+  --color-muted: 243, 244, 246; /* gray-100 */
+  --color-muted-foreground: 107, 114, 128; /* gray-500 */
+  --color-accent: 34, 197, 94; /* green-500 */
+  --color-accent-foreground: 255, 255, 255; /* white */
+  --color-card: 255, 255, 255; /* white */
+  --color-card-foreground: 17, 24, 39; /* gray-900 */
+  --color-border: 229, 231, 235; /* gray-200 */
   --radius: 0.75rem;
-}
-
-/* Light mode variables */
-:root {
-  --background: 0 0% 100%;
-  --foreground: 222.2 84% 4.9%;
-  --card: 0 0% 100%;
-  --card-foreground: 222.2 84% 4.9%;
-  --popover: 0 0% 100%;
-  --popover-foreground: 222.2 84% 4.9%;
-  --primary: 142.1 76.2% 36.3%;
-  --primary-foreground: 355.7 100% 97.3%;
-  --secondary: 142.1 76.2% 36.3%;
-  --secondary-foreground: 355.7 100% 97.3%;
-  --muted: 210 40% 96.1%;
-  --muted-foreground: 215.4 16.3% 46.9%;
-  --accent: 142.1 76.2% 36.3%;
-  --accent-foreground: 222.2 47.4% 11.2%;
-  --destructive: 0 84.2% 60.2%;
-  --destructive-foreground: 210 40% 98%;
-  --border: 214.3 31.8% 91.4%;
-  --input: 214.3 31.8% 91.4%;
-  --ring: 142.1 76.2% 36.3%;
 }
 
 /* Dark mode variables */
 .dark {
-  --background: 222.2 84% 4.9%;
-  --foreground: 210 40% 98%;
-  --card: 222.2 84% 4.9%;
-  --card-foreground: 210 40% 98%;
-  --popover: 222.2 84% 4.9%;
-  --popover-foreground: 210 40% 98%;
-  --primary: 142.1 70.0% 45.3%;
-  --primary-foreground: 210 40% 98%;
-  --secondary: 142.1 70.0% 45.3%;
-  --secondary-foreground: 210 40% 98%;
-  --muted: 217.2 32.6% 17.5%;
-  --muted-foreground: 215 20.2% 65.1%;
-  --accent: 142.1 70.0% 45.3%;
-  --accent-foreground: 210 40% 98%;
-  --destructive: 0 62.8% 30.6%;
-  --destructive-foreground: 210 40% 98%;
-  --border: 217.2 32.6% 17.5%;
-  --input: 217.2 32.6% 17.5%;
-  --ring: 142.4 70.0% 45.3%;
+  --color-background: 17, 24, 39; /* gray-900 */
+  --color-foreground: 255, 255, 255; /* white */
+  --color-primary: 34, 197, 94; /* green-500 */
+  --color-primary-foreground: 255, 255, 255; /* white */
+  --color-secondary: 34, 197, 94; /* green-500 */
+  --color-secondary-foreground: 255, 255, 255; /* white */
+  --color-muted: 31, 41, 55; /* gray-800 */
+  --color-muted-foreground: 156, 163, 175; /* gray-400 */
+  --color-accent: 34, 197, 94; /* green-500 */
+  --color-accent-foreground: 255, 255, 255; /* white */
+  --color-card: 31, 41, 55; /* gray-800 */
+  --color-card-foreground: 255, 255, 255; /* white */
+  --color-border: 55, 65, 81; /* gray-700 */
 }
 
+/* Apply base styles */
+@layer base {
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom utility classes */
+.bg-background {
+  background-color: rgb(var(--color-background));
+}
+
+.text-foreground {
+  color: rgb(var(--color-foreground));
+}
+
+.bg-card {
+  background-color: rgb(var(--color-card));
+}
+
+.text-card-foreground {
+  color: rgb(var(--color-card-foreground));
+}
+
+.bg-muted {
+  background-color: rgb(var(--color-muted));
+}
+
+.text-muted-foreground {
+  color: rgb(var(--color-muted-foreground));
+}
+
+.border-border {
+  border-color: rgb(var(--color-border));
+}
+
+/* Global styles */
 html {
   scroll-behavior: smooth;
 }
@@ -68,7 +84,7 @@ body {
     "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  @apply bg-background text-foreground transition-colors duration-300;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .dark {
