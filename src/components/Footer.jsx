@@ -130,7 +130,7 @@ const Footer = () => {
       <div className="border-t border-gray-800 py-6">
         <div className="container mx-auto px-4 flex flex-col sm:flex-row justify-between items-center">
           <p className="text-sm text-gray-400 mb-4 sm:mb-0">
-            &copy; {new Date().getFullYear()} Your Site Name. All Right Reserved. Designed By
+            &copy; {new Date().getFullYear()} WASHLAND. All Right Reserved. Designed By
             <a href="#" className="text-green-500 ml-1 hover:underline">
             AMIT
             </a>

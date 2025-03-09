@@ -8,7 +8,7 @@ const blogPosts = [
     id: 1,
     title: "Achieving True Exterior Shine",
     excerpt: "Lorem ipsum dolor sit amet consectur adip sed eiusmod tempor.",
-    image:"./public/blog-1.jpg",
+    image:"./assets/blog-1.jpg",
     date: "10 Feb, 2023",
     author: "Admin",
     comments: 23,
@@ -18,7 +18,7 @@ const blogPosts = [
     title: "Cleanliness Beyond the Hood",
     excerpt: "Lorem ipsum dolor sit amet consectur adip sed eiusmod tempor.",
     image:
-      "./public/blog-2.jpg",
+      "./assets/blog-2.jpg",
     date: "15 Feb, 2023",
     author: "Admin",
     comments: 17,
@@ -28,7 +28,7 @@ const blogPosts = [
     title: "Safety and Style Combined",
     excerpt: "Lorem ipsum dolor sit amet consectur adip sed eiusmod tempor.",
     image:
-      "./public/blog-3.jpg",
+      "./assets/blog-3.jpg",
     date: "22 Feb, 2023",
     author: "Admin",
     comments: 9,
@@ -38,7 +38,7 @@ const blogPosts = [
     title: "Why Interior Detail Matters",
     excerpt: "Lorem ipsum dolor sit amet consectur adip sed eiusmod tempor.",
     image:
-      "./public/blog-4.jpg",
+      "./assets/blog-4.jpg",
     date: "28 Feb, 2023",
     author: "Admin",
     comments: 14,
@@ -90,7 +90,7 @@ const Blog = () => {
   const totalPages = blogPosts.length - visiblePosts + 1
 
   return (
-    <section className="py-16 bg-gray-900 dark:bg-gray-950 text-white">
+    <section id="blog" className="py-16 bg-gray-900 dark:bg-gray-950 text-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <span className="inline-block text-green-500 text-sm font-semibold mb-2 px-4 py-1 border border-green-500 rounded-full">

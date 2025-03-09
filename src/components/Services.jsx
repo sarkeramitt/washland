@@ -7,7 +7,7 @@ const services = [
     title: "Exterior Shine",
     description: "Thorough hand wash and polish for a gleaming finish.",
     image:
-      "./public/service-1.jpg",
+      "./assets/service-1.jpg",
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ const services = [
     title: "Interior Detail",
     description: "Deep cleaning of seats, carpets, and dashboard surfaces.",
     image:
-      "./public/service-2.jpg",
+      "./assets/service-2.jpg",
   },
   {
     id: 3,
@@ -23,7 +23,7 @@ const services = [
     title: "Wheel Care",
     description: "Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.",
     image:
-      "./public/service-3.jpg",
+      "./assets/service-3.jpg",
   },
   {
     id: 4,
@@ -31,7 +31,7 @@ const services = [
     title: "Window Clarity",
     description: "Streak-free window cleaning, inside and out",
     image:
-      "./public/service-4.jpg",
+      "./assets/service-4.jpg",
   },
   {
     id: 5,
@@ -39,7 +39,7 @@ const services = [
     title: "Wax Protection",
     description: "Application of protective wax to enhance paint longevity.",
     image:
-      "./public/service-5.jpg",
+      "./assets/service-5.jpg",
   },
   {
     id: 6,
@@ -47,7 +47,7 @@ const services = [
     title: "Engine Bay",
     description: "Cleaning and degreasing of the engine compartment.",
     image:
-      "./public/service-6.jpg",
+      "./assets/service-6.jpg",
   },
 ]
 

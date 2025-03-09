@@ -59,7 +59,7 @@ const About = () => {
 
           <div className="mt-10 md:mt-0">
             <img
-              src="./public/about.jpg"
+              src="./assets/about.jpg"
               alt="Air conditioner"
               className="rounded-2xl shadow-xl w-full h-auto"
             />

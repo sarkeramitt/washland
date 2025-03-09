@@ -10,7 +10,7 @@ const slides = [
     description:
       "Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr.",
     image:
-      "./public/slide-1.jpg",
+      "./assets/slide-1.jpg",
   },
   {
     id: 2,
@@ -18,14 +18,14 @@ const slides = [
     description:
       "Leading the way in renewable energy technology with innovative solutions for a cleaner, greener planet.",
     image:
-      "./public/slide-2.jpg",
+      "./assets/slide-2.jpg",
   },
   {
     id: 3,
     title: "The Long-Term Benefits of Regular Waxing",
     description: "Harnessing the power of nature to create clean, renewable energy solutions for homes and businesses.",
     image:
-      "./public/slide-3.jpg",
+      "./assets/slide-3.jpg",
   },
 ]
 

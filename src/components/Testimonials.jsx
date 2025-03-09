@@ -8,40 +8,40 @@ const testimonials = [
     id: 1,
     content:
       "Lorem Ipsum is simply dummy text of the printing Ipsum has been the industry's standard dummy text ever since the 1500s.",
-    name: "John Smith",
+    name: "John Cameth",
     profession: "Business Owner",
     image:
-      "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+      "./assets/client-1.png",
     rating: 4,
   },
   {
     id: 2,
     content:
       "Lorem Ipsum is simply dummy text of the printing Ipsum has been the industry's standard dummy text ever since the 1500s.",
-    name: "Sarah Johnson",
+    name: "Julia Johnson",
     profession: "Marketing Director",
     image:
-      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80",
+      "./assets/client-2.png",
     rating: 5,
   },
   {
     id: 3,
     content:
       "Lorem Ipsum is simply dummy text of the printing Ipsum has been the industry's standard dummy text ever since the 1500s.",
-    name: "Michael Brown",
+    name: "Michael Clark",
     profession: "CEO",
     image:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+      "./assets/client-1.png",
     rating: 5,
   },
   {
     id: 4,
     content:
       "Lorem Ipsum is simply dummy text of the printing Ipsum has been the industry's standard dummy text ever since the 1500s.",
-    name: "Emily Davis",
+    name: "Maria Davis",
     profession: "Designer",
     image:
-      "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=761&q=80",
+      "./assets/client-2.png",
     rating: 4,
   },
 ]

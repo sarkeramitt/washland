@@ -3,18 +3,17 @@
 import { useState } from "react"
 import { MapPin, Phone } from "lucide-react"
 
-
 const locations = [
   {
     id: 1,
     title: "Car Washing Point",
-    address: "123 Street, New York, USA",
+    address: "123 Street, CA, USA",
     phone: "+012 345 6789",
   },
   {
     id: 2,
     title: "Car Washing Point",
-    address: "123 Street, New York, USA",
+    address: "123 Street, Las Vegas, USA",
     phone: "+012 345 6789",
   },
   {
@@ -26,7 +25,7 @@ const locations = [
   {
     id: 4,
     title: "Car Washing Point",
-    address: "123 Street, New York, USA",
+    address: "123 Street, London, UK",
     phone: "+012 345 6789",
   },
 ]
@@ -57,22 +56,32 @@ const Contact = () => {
     setLoading(true)
 
     try {
-      // Replace these with your actual EmailJS service, template, and user IDs
-      const result = await emailjs.send(
-        "YOUR_SERVICE_ID",
-        "YOUR_TEMPLATE_ID",
-        {
-          from_name: formData.name,
-          reply_to: formData.email,
-          message: formData.message,
+      console.log("Submitting form data:", formData)
+
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
         },
-        "YOUR_USER_ID",
-      )
+        body: JSON.stringify(formData),
+      })
+
+      console.log("Response status:", response.status)
+
+      // Check if the response is ok before trying to parse JSON
+      if (!response.ok) {
+        const errorText = await response.text()
+        console.error("Error response text:", errorText)
+        throw new Error(`Server responded with ${response.status}: ${errorText}`)
+      }
+
+      const data = await response.json()
+      console.log("Response data:", data)
 
       setStatus({
         submitted: true,
         success: true,
-        message: "Your message has been sent successfully!",
+        message: data.message || "Your message has been sent successfully!",
       })
 
       // Reset form
@@ -82,10 +91,11 @@ const Contact = () => {
         message: "",
       })
     } catch (error) {
+      console.error("Error submitting form:", error)
       setStatus({
         submitted: true,
         success: false,
-        message: "There was an error sending your message. Please try again.",
+        message: `There was an error sending your message: ${error.message}`,
       })
     } finally {
       setLoading(false)
@@ -102,11 +112,12 @@ const Contact = () => {
   }
 
   return (
-    <section id="contact" className="py-16 bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300">
+    <section id="contact" className="py-16 bg-gray-900 dark:bg-gray-950 text-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-        <span className="inline-block text-green-500 text-sm font-semibold mb-2 px-4 py-1 border border-green-500 rounded-full">Contact Us</span>
-          <h3 className="text-3xl md:text-5xl font-bold mt-2">Car Washing & Care Points</h3>
+          <h2 className="text-3xl md:text-4xl font-bold">WASHING POINTS</h2>
+          <div className="w-20 h-1 bg-green-500 mx-auto mt-2"></div>
+          <h3 className="text-3xl md:text-5xl font-bold mt-4">Car Washing & Care Points</h3>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -121,7 +132,7 @@ const Contact = () => {
                   </div>
                 </div>
                 <div className="flex items-center">
-                <Phone className="w-5 h-5 mr-3 flex-shrink-0" />
+                <Phone className="w-6 h-6 mr-2 flex-shrink-0" />
                   <a href={`tel:${location.phone}`} className="text-green-500 hover:underline">
                     {location.phone}
                   </a>
