@@ -83,8 +83,10 @@ const Testimonials = () => {
     <section className="py-16 bg-white dark:bg-gray-900">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <span className="text-green-500 font-semibold uppercase">TESTIMONIALS</span>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mt-2">Our Clients Reviews.</h2>
+          <span className="inline-block text-green-500 text-sm font-semibold mb-2 px-4 py-1 border border-green-500 rounded-full">
+          Testimonials
+          </span>
+          <h2 className="text-3xl md:text-4xl font-bold text-white">Our Clients Reviews</h2>
         </div>
 
         <div className="flex justify-end mb-4 space-x-2">

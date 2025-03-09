@@ -8,7 +8,7 @@ const About = () => {
           <span className="inline-block text-green-500 text-sm font-semibold mb-2 px-4 py-1 border border-green-500 rounded-full">
             About
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold ">All About US</h2>
+          <h2 className="text-3xl md:text-4xl font-bold ">Why Choose Us</h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <div className="space-y-6">
