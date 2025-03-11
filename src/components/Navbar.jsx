@@ -68,7 +68,7 @@ const Navbar = () => {
         <div className="container mx-auto flex justify-between items-center">
           <a href="#" className="text-2xl font-bold text-green-500">
           <span className=" text-green-500 mb-2 px-4 py-1 border border-green-500 rounded-full">
-            WASHLAND
+            WASHLANDS
             </span>
           </a>
 

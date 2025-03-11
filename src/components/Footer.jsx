@@ -18,7 +18,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center">
                 <Mail className="w-5 h-5 mr-3 flex-shrink-0" />
-                <p>info@washland.com</p>
+                <p>info@washlands.com</p>
               </div>
               <div className="flex space-x-3 mt-4">
                 <a href="#" className="bg-gray-800 text-white p-2 rounded-full hover:bg-gray-700 transition-colors duration-300">
@@ -130,7 +130,7 @@ const Footer = () => {
       <div className="border-t border-gray-800 py-6">
         <div className="container mx-auto px-4 flex flex-col sm:flex-row justify-between items-center">
           <p className="text-sm text-gray-400 mb-4 sm:mb-0">
-            &copy; {new Date().getFullYear()} WASHLAND. All Right Reserved. Designed By
+            &copy; {new Date().getFullYear()} WASHLANDS. All Right Reserved. Designed By
             <a href="#" className="text-green-500 ml-1 hover:underline">
             AMIT
             </a>
