@@ -8,25 +8,25 @@ const locations = [
     id: 1,
     title: "Car Washing Point",
     address: "123 Street, CA, USA",
-    phone: "+012 345 6789",
+    phone: "+011 345 6789",
   },
   {
     id: 2,
     title: "Car Washing Point",
     address: "123 Street, Las Vegas, USA",
-    phone: "+012 345 6789",
+    phone: "+022 345 6789",
   },
   {
     id: 3,
     title: "Car Washing Point",
     address: "123 Street, New York, USA",
-    phone: "+012 345 6789",
+    phone: "+033 345 6789",
   },
   {
     id: 4,
     title: "Car Washing Point",
     address: "123 Street, London, UK",
-    phone: "+012 345 6789",
+    phone: "+044 345 6789",
   },
 ]
 
